@@ -1,0 +1,35 @@
+{
+  "name": "overreact",
+  "version": "1.0.0",
+  "description": "Over React Project 3",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "installDeps": "yarn && cd client && yarn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimboneely/overreact.git"
+  },
+  "author": "JRBF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimboneely/overreact/issues"
+  },
+  "homepage": "https://github.com/jimboneely/overreact#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  }
+}
