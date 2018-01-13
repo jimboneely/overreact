@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const googleapi = require ("./googleapi");
+const google = require ("./google");
 // const articleRoutes = require("./articles");
 // const nytRoutes = require("./nyt");
 
@@ -8,6 +8,6 @@ const googleapi = require ("./googleapi");
 
 // router.use("/nyt", nytRoutes);
 
-router.use("/google", googleapi);
+router.use("/google", google);
 
 module.exports = router;
