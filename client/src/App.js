@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,7 +17,9 @@ class App extends Component {
           <h1 className="App-title">Mad Pass</h1>
         </header>
         <p className="App-intro">
-          <Authentication />
+          <Switch>
+
+          </Switch>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
