@@ -18,8 +18,9 @@ html, body {
 }
 
 h1 {
+  font-family: 'Abril Fatface', cursive;
   font-weight: 700;
-  font-size: 7rem;
+  font-size: 10rem;
   margin: auto;
   color: #FFFFFF;
 }
@@ -31,4 +32,9 @@ h1 {
   background-color: #3AAFA9;
   width: 100%;
   margin: 0 auto;
+ }
+
+ .btn-main{
+   margin: 50px;
+   padding: 20px;
  }
