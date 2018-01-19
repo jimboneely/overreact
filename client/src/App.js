@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import QuestionGen from "./components/QuestionGen";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import './App.css';
@@ -16,6 +17,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <MainPage />
+        <Route exact path="/questiongen" component={QuestionGen} />
           <Switch>
 
           </Switch>
