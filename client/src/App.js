@@ -6,6 +6,7 @@ import './App.css';
 // Custom Components
 import Authentication from './components/Authentication';
 import MainPage from './components/MainPage/';
+import NavBar from './components/NavBar/';
 // End Custom Components
 
 class App extends Component {
@@ -13,9 +14,10 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
+        <NavBar />
         <MainPage />
           <Switch>
-          
+
           </Switch>
       </div>
       </Router>
