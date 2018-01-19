@@ -10,7 +10,7 @@ const MainPage = () =>
 <h3 className="mb-5">
   <em>Security is a Laughing Matter. </em>
 </h3>
-<a className="btn btn-primary btn-xl btn-main js-scroll-trigger" href="#about">Generate Passphrase</a>
+<button className="btn-main js-scroll-trigger" href="#about"><em>Generate Passphrase</em></button>
 </div>
 </div>
 

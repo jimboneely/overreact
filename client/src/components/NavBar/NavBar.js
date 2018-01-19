@@ -15,11 +15,11 @@ class NavBar extends Component {
 
     render () {
         return (
-        
+
         <nav className="navbar navbar-default navbar-static-top">
         <div className="container-fluid nav-div">
         {!this.state.username?
-        <span className="nav navbar-nav navbar-right" onClick={this.handleFormLogin} >Login</span>
+        <span className="nav navbar-nav navbar-right" onClick={this.handleFormLogin} ><button className="btn-login">Login</button></span>
         :<span onClick={this.handleFormLogin}>LogOut</span>}
         </div>
         </nav>
