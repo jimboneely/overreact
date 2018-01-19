@@ -16,11 +16,8 @@ class App extends Component {
       <Router>
       <div className="App">
         <NavBar />
-        <MainPage />
-        <Route exact path="/questiongen" component={QuestionGen} />
-          <Switch>
-
-          </Switch>
+          <Route exact path="/" component={MainPage} / >
+          <Route exact path="/questiongen" component={QuestionGen} />
       </div>
       </Router>
     );

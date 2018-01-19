@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../logo.svg';
+import { Link } from "react-router-dom";
 
 const MainPage = () =>
 <div>
@@ -10,8 +11,8 @@ const MainPage = () =>
 <h3 className="mb-5">
   <em>Security is a Laughing Matter. </em>
 </h3>
-<button className="btn-main js-scroll-trigger" href="#about"><em>Generate Passphrase</em></button>
+<Link to="/questiongen">Generate Passphrase</Link>
 </div>
-</div>
+</div>;
 
 export default MainPage;
