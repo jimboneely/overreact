@@ -1,53 +1,37 @@
-import React, { Component } from "react";
-
-class NavBar extends Component {
-    state = {
-        username:''
-    }
-    // Code below for logging in to Facebook
-    handleFormLogin = event => {
-        console.log(this.state.username?"True":"False")
-        // if false prompt for login
-    };
-    componentDidMount(){
-        console.log(this.state.username)
-    }
-
-    render () {
-        return (
-
-        <nav className="navbar navbar-default navbar-static-top">
-        <div className="container-fluid nav-div">
-        {!this.state.username?
-        <span className="nav navbar-nav navbar-right" onClick={this.handleFormLogin} ><button className="btn-login">Login</button></span>
-        :<span onClick={this.handleFormLogin}>LogOut</span>}
-        </div>
-        </nav>
-    );
-    }
-}
-
-export default NavBar;
+import React from "react";
+import { Link } from "react-router-dom";
 
 
+// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+const Navbar = props =>
+  <nav className="navbar navbar-default">
+    <div className="container-fluid">
+      <div className="navbar-header">
+        <Link className="navbar-brand" to="/">
+          MadKeys
+        </Link>
+      </div>
+      
+      <ul className="nav navbar-nav navbar-right">
 
-<nav className="navbar navbar-inverse">
-  <div className="container-fluid">
-    <div className="navbar-header">
-      <a className="navbar-brand" href="#">MadPass</a>
+        <li
+          className={
+            window.location.pathname === "/" ||
+            window.location.pathname === "/"
+              ? "active"
+              : ""
+          }
+        >
+          <Link to="/">About</Link>
+        </li>
+        <li
+          className={window.location.pathname === "/" ? "active" : ""}
+        >
+          <Link to="/Login">Login</Link>
+        </li>
+      
+      </ul>
     </div>
-    <ul className="nav navbar-nav">
+  </nav>;
 
-    </ul>
-    <ul className="nav navbar-nav navbar-right">
-     <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="#"><i className="fa fa-bars  fa-fw" aria-hidden="true"></i></a>
-        <ul className="dropdown-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Something Else</a></li>
-        </ul>
-      </li>
-
-    </ul>
-  </div>
-</nav>
+export default Navbar;
