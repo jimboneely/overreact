@@ -5,7 +5,7 @@ const Authentication = props => {
     
     return <div>
 
-        <h1>Authentication Goes here</h1>
+        <h1>Authentication Goes here now</h1>
 
     </div>
 }
