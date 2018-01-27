@@ -8,6 +8,7 @@ import './App.css';
 import Authentication from './components/Authentication';
 import MainPage from './components/MainPage/';
 import NavBar from './components/NavBar/';
+import ImageDisplay from './components/ImageDisplay/';
 // End Custom Components
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
           <Route exact path="/" component={MainPage} / >
+          <Route exact path="/" component={ImageDisplay} />
           <Route exact path="/questiongen" component={QuestionGen} />
       </div>
       </Router>

@@ -1,3 +1,2 @@
 // Rename file below
-export { default } from "./NavBar"; //<=Rename file
-
+export { default } from "./NavBar"; 

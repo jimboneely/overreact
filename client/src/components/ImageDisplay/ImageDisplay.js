@@ -1,25 +1,41 @@
-import React from 'react';
-
-class App extends Component {
-    state = {
-        pagenumber:""
-    }
-   (function() {
-    var cx = '017917501057708533917:hdfpnf6eoos';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+import React, { Component } from 'react';
 
 
-    //end Image JS Code
-
-    render() {
-      return (
-        <h2>THe image HTML goes here</h2>
-      );
-    }
+class ImageDisplay extends Component {
+  constructor(){
+    super();
+    this.state = {
+      pictures: [],
+    };
   }
+ 
+componentDidMount(){
+fetch ('http://api.giphy.com/v1/gifs/search?q=dog&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=5')
+.then(results=>{
+   console.log("firstResults",results);
+  return results.json();
+}).then(data=>{
+  console.log("data", data);
+let pictures = data.data.map((pic) =>{
+  return pic.images.downsized_medium.url;
+
+    
+    
+
+})
+  this.setState({pictures:pictures});
+ console.log("state", this.state.pictures);
+})
+}
+
+render(){
+  return(
+    <div className="container" >
+  
+      {this.state.pictures.map(pic => <img src={pic} height="150" />)}
+    </div>
+    )
+}
+}
+
+export default ImageDisplay;
