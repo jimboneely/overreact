@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import API from "../../utils/API";
 import "./QuestionGen.css";
 
 class QuestionGen extends Component {
   state = {
     noun: "",
     verb: "",
-    number: ""
+    number: "",
+    sentence:""
   };
 
   handleInputChange = event => {
@@ -17,18 +19,25 @@ class QuestionGen extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-
-    alert(`${this.state.noun} ${this.state.verb} ${this.state.number}`);
+    API.getSentence(this.state.noun,this.state.verb,this.state.number).then(data => {
+      this.setState({
+        sentence: data.data.sentences
+      });
+      console.log(data)}
+    );
     this.setState({
       noun: "",
       verb: "",
-      number: ""
+      number: "",
+      sentence:""
     });
+
   };
 
   render() {
 
     return (
+    <div>
     <div className="question-body">
     <form>
       <div className="form-group">
@@ -75,7 +84,17 @@ class QuestionGen extends Component {
         </button>
       </div>
     </form>
-    </div>
+  </div>
+  {this.state.sentence.length > 0 &&
+  <h2>
+    {this.state.sentence}
+  </h2>
+  }
+  {this.state.sentence.length > 0 &&
+    <button className= "btn btn-lg">use passphrase
+    </button>
+  }
+  </div>
 );
   }
 }

@@ -1,2 +1,1 @@
-export { default } from "./QuestionGen";
-
+export { default } from "./Passphrase";

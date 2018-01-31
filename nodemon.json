@@ -1,5 +1,6 @@
 {
   "ignore": [
     "client/*"
-  ]
+  ],
+  "debug":true
 }
