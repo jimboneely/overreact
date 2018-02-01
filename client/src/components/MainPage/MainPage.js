@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import { Link } from "react-router-dom";
+import SimpleSlider from '../Slide/';
 
 const MainPage = () =>
 <div>
@@ -12,7 +13,9 @@ const MainPage = () =>
   <em>Security is no Laughing Matter. </em>
 </h3>
 <Link to="/questiongen"><button className="btn-main">Generate Passphrase</button></Link>
+<SimpleSlider />
 </div>
+
 </div>;
 
 export default MainPage;
