@@ -20,7 +20,8 @@ class App extends Component {
         <NavBar />
           <Route exact path="/" component={MainPage} / >
           <Route exact path="/questiongen" component={QuestionGen} />
-        
+          <Route exact path="/simpleslider" component={SimpleSlider} />
+
       </div>
       </Router>
     );

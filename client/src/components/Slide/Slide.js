@@ -4,19 +4,23 @@ import Slider from 'react-slick';
 
 class SimpleSlider extends Component {
   state = {
+    sentence:"fish",
     images: [
-        
+
     ]
   }
+
+
 componentDidMount(){
-fetch ('http://api.giphy.com/v1/gifs/search?q=dog&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12')
+const query = this.state.sentence;
+fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12')
 .then(results=>{
    console.log("firstResults",results);
   return results.json();
 }).then(data=>{
   console.log("data", data);
 let pictures = data.data.map((pic) =>{
-  return pic.images.downsized_medium.url;   
+  return pic.images.downsized_medium.url;
 
 })
   this.setState({images:pictures});

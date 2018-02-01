@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./QuestionGen.css";
 
@@ -91,8 +93,7 @@ class QuestionGen extends Component {
   </h2>
   }
   {this.state.sentence.length > 0 &&
-    <button className= "btn btn-lg">use passphrase
-    </button>
+    <Link to="/simpleslider"><button className="btn-main">Use Passphrase</button></Link>
   }
   </div>
 );
