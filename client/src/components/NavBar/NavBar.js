@@ -23,22 +23,22 @@ class NavBar extends Component {
     let userMessage;
     if(!this.state.googleId) {
       userMessage = (
-        <React.Fragment>
         <GoogleLogin className="gButton"
             clientId="1021589974701-olsqcgmj3pijos52r3t3j7dnid9ol0ht.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={responseGoogleLoggedIn}
             onFailure={responseGoogleLoggedInFail} />
-          <UserImage img={this.state.imageUrl}/>
-          </React.Fragment>
       )
     } else {
       userMessage = (
+        <React.Fragment>
         <GoogleLogout
           className="gButton"
           buttonText="Logout"
           onLogoutSuccess={responseGoogleLoggedInFail}>
         </GoogleLogout>
+        <UserImage img={this.state.imageUrl}/>
+        </React.Fragment>
         
       )
     }
