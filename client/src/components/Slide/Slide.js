@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import "./Slide.css";
 import Slider from 'react-slick';
 
-
-
-
-
 class SimpleSlider extends Component {
   state = {
     images: [
@@ -38,7 +34,7 @@ let pictures = data.data.map((pic) =>{
       slidesToScroll: 3
     };
     return (
-      <div className='container2'>
+      <div className='container'>
         <Slider {...settings}>
           {this.state.images.map(image => <div><img src={image} height="200" width="300" /></div>)}
         </Slider>
