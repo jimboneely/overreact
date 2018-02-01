@@ -17,6 +17,10 @@ The game is composed of the following:
 * react.js
 * mongoose.js
 * body-parser.js
+* Other Librariess
+	* react-google-auth
+	* mongoose
+	* react-slick
 ### API’s:
 * google custom search -> for images
 * firebase
