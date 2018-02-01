@@ -12,8 +12,12 @@ class SimpleSlider extends Component {
 
 
 componentDidMount(){
+<<<<<<< HEAD
 const query = this.state.sentence;
 fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12')
+=======
+fetch ('http://api.giphy.com/v1/gifs/search?q=cat&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12')
+>>>>>>> 98170bf2dca672787a16879cbedd839b694c5ec5
 .then(results=>{
    console.log("firstResults",results);
   return results.json();

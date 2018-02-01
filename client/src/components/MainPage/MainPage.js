@@ -10,7 +10,7 @@ const MainPage = () =>
 <h1 className="mb-1">Madpass</h1>
 </div>
 <h3 className="mb-5">
-  <em>Security is no Laughing Matter. </em>
+  <em>Security is no Laughing Matter... </em>
 </h3>
 <Link to="/questiongen"><button className="btn-main">Generate Passphrase</button></Link>
 <SimpleSlider />
