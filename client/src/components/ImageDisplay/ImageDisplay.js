@@ -9,7 +9,7 @@ class ImageDisplay extends Component {
     };
   }
 componentDidMount(){
-fetch ('http://api.giphy.com/v1/gifs/search?q=dog&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=5')
+fetch ('http://api.giphy.com/v1/gifs/search?q=cat&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=5')
 .then(results=>{
    console.log("firstResults",results);
   return results.json();
