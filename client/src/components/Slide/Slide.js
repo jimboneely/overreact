@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 class SimpleSlider extends Component {
   state = {
-    sentence:"cat",
+    sentence:"fart",
     images: [
 
     ]
@@ -13,7 +13,7 @@ class SimpleSlider extends Component {
 
 componentDidMount(){
 const query = this.state.sentence;
-fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12')
+fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12&rating=g')
 .then(results=>{
    console.log("firstResults",results);
   return results.json();
