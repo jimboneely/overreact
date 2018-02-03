@@ -1,47 +1,46 @@
 import React, { Component} from "react";
 import { Link } from "react-router-dom";
-import UserImage from "../UserImage/"
-import GoogleLogin from 'react-google-login';
-import GoogleLogout from 'react-google-login';
+import UserImage from "../UserImage/";
 import './NavBar.css';
-
+import firebase, { auth, provider } from '../../firebase.js';
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 
 class NavBar extends Component {
-  state={
-    googleId:""
+  constructor() {
+    super();
+    this.login = this.login.bind(this); 
+    this.logout = this.logout.bind(this); 
   };
-
-  render() {
-    const responseGoogleLoggedIn = (response) => {
-      console.log(response.profileObj);
-      this.setState(response.profileObj);
-    }
-    const responseGoogleLoggedInFail = (response) => {
-      console.log(response);
-    }
-    let userMessage;
-    if(!this.state.googleId) {
-      userMessage = (
-        <GoogleLogin className="gButton"
-            clientId="1021589974701-olsqcgmj3pijos52r3t3j7dnid9ol0ht.apps.googleusercontent.com"
-            buttonText="Login"
-            onSuccess={responseGoogleLoggedIn}
-            onFailure={responseGoogleLoggedInFail} />
-      )
-    } else {
-      userMessage = (
-        <React.Fragment>
-        <GoogleLogout
-          className="gButton"
-          buttonText="Logout"
-          onLogoutSuccess={responseGoogleLoggedInFail}>
-        </GoogleLogout>
-        <UserImage img={this.state.imageUrl}/>
-        </React.Fragment>
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } 
+    })};
+  state={
+    user: null
+  };
+  login() {
+    auth.signInWithPopup(provider) 
+      .then((result) => {
         
-      )
-    }
+        const user = result.user;
+        this.setState({
+          user
+        });
+        console.log(this.state.user.photoURL);
+      });
+  };
+  logout() {
+    auth.signOut()
+      .then(() => {
+        this.setState({
+          user: null
+        });
+      });
+  };
+  render() {
+
     return (
     <nav className="navbar navbar-default">
     <div className="container-fluid">
@@ -66,8 +65,15 @@ class NavBar extends Component {
         <li
           className={window.location.pathname === "/" ? "active" : ""}
         >
-          {userMessage}
- 
+        {this.state.user ?
+          <React.Fragment>
+          <button className="loginButton" onClick={this.logout}>Log Out</button>
+          <UserImage img={this.state.user.photoURL}/>
+          </React.Fragment>
+          :
+          <button className="loginButton" onClick={this.login}>Log In</button>              
+        }
+
         </li>
       
       </ul>
