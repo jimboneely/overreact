@@ -6,6 +6,7 @@ import "./QuestionGen.css";
 import SimpleSlider from '../Slide/';
 
 class QuestionGen extends Component {
+
   state = {
     noun: "",
     verb: "",
@@ -104,7 +105,7 @@ class QuestionGen extends Component {
 
     <div>
       
-      {this.state.sentence?
+      {this.state.sentence ?
         <SimpleSlider sentence={this.state.sentence} />
         :  
         this.displayQuestionGenerator()}

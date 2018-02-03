@@ -17,7 +17,11 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
+<<<<<<< HEAD
         <NavBar/ >
+=======
+          <NavBar />
+>>>>>>> 893345b838fa35274ee822c6183a721a3ef3a455
           <Route exact path="/" component={MainPage} / >
           <Route exact path="/questiongen" component={QuestionGen} />
           <Route exact path="/simpleslider" component={SimpleSlider} />
