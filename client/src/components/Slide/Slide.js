@@ -18,7 +18,7 @@ componentDidMount(){
 giphyGetData(){
   console.log("****",this.props.sentence);
   const query = this.props.sentence;
-  fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12')
+  fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12&rating=g')
   .then(results=>{
     console.log("firstResults",results);
     return results.json();
