@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./QuestionGen.css";
+import SimpleSlider from '../Slide/';
 
 class QuestionGen extends Component {
   state = {
@@ -18,28 +19,9 @@ class QuestionGen extends Component {
       [name]: value
     });
   };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    API.getSentence(this.state.noun,this.state.verb,this.state.number).then(data => {
-      this.setState({
-        sentence: data.data.sentences
-      });
-      console.log(data)}
-    );
-    this.setState({
-      noun: "",
-      verb: "",
-      number: "",
-      sentence:""
-    });
-
-  };
-
-  render() {
-
-    return (
-    <div>
+  displayQuestionGenerator = () => {
+    return(
+      <div>
     <div className="question-body">
     <form>
       <div className="form-group">
@@ -96,7 +78,40 @@ class QuestionGen extends Component {
     <Link to="/simpleslider"><button className="btn-main">Use Passphrase</button></Link>
   }
   </div>
-);
+    )
+  }
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    API.getSentence(this.state.noun,this.state.verb,this.state.number).then(data => {
+      this.setState({
+        sentence: data.data.sentences
+      });
+      console.log(data)}
+    );
+    this.setState({
+      noun: "",
+      verb: "",
+      number: "",
+      sentence:""
+    });
+
+  };
+
+  render() {
+
+    return (
+
+    <div>
+      
+      {this.state.sentence?
+        <SimpleSlider sentence={this.state.sentence} />
+        :  
+        this.displayQuestionGenerator()}
+      
+    </div>
+
+  );
   }
 }
 export default QuestionGen;
