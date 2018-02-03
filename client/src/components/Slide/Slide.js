@@ -13,22 +13,6 @@ constructor(props){
   super(props)
 }
 componentDidMount(){
-<<<<<<< HEAD
-const query = this.state.sentence;
-fetch ('http://api.giphy.com/v1/gifs/search?q='+query+'&api_key=zhr9DqsW147pBa81cCKYpYVTo78NIs6S&limit=12&rating=g')
-.then(results=>{
-   console.log("firstResults",results);
-  return results.json();
-}).then(data=>{
-  console.log("data", data);
-let pictures = data.data.map((pic) =>{
-  return pic.images.downsized_medium.url;
-
-})
-  this.setState({images:pictures});
- console.log("state", this.state.pictures);
-})
-=======
   this.giphyGetData();
 }
 giphyGetData(){
@@ -46,7 +30,6 @@ giphyGetData(){
     this.setState({images:pictures});
     console.log("state", this.state.pictures);
   })
->>>>>>> b3081c708ce1cb1ee338cad07cb66a6bbe2e49ba
 }
 
   render() {
