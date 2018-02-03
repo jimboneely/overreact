@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 class SimpleSlider extends Component {
   state = {
-    sentence:"fish",
+    sentence:"cat",
     images: [
 
     ]
