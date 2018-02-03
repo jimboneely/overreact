@@ -106,10 +106,11 @@ class QuestionGen extends Component {
     <div>
 
       {this.state.sentence ?
+        <div>
         <SimpleSlider sentence={this.state.sentence} />
         <h2>{this.state.sentence}</h2>
-        <button className="btn-main">Save Passphrase</button></Link>
-
+        <button className="btn-main">Save Passphrase</button>
+        </div>
         :
         this.displayQuestionGenerator()}
 
