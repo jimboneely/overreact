@@ -107,6 +107,7 @@ class QuestionGen extends Component {
       
       {this.state.sentence ?
         <SimpleSlider sentence={this.state.sentence} />
+        <h2>{this.state.sentence}</h2>
         :  
         this.displayQuestionGenerator()}
       
