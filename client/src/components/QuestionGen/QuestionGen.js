@@ -81,7 +81,14 @@ class QuestionGen extends Component {
   </div>
     )
   }
-
+  clearSentenceState = event => {
+    this.setState({
+      noun: "",
+      verb: "",
+      number: "",
+      sentence:""
+    });
+  };
   handleFormSubmit = event => {
     event.preventDefault();
     API.getSentence(this.state.noun,this.state.verb,this.state.number).then(data => {
@@ -109,6 +116,7 @@ class QuestionGen extends Component {
         <div>
         <SimpleSlider sentence={this.state.sentence} />
         <h2>{this.state.sentence}</h2>
+        <button className="btn-main" onClick={this.clearSentenceState}>Retry</button>
         <button className="btn-main">Save Passphrase</button>
         </div>
         :
