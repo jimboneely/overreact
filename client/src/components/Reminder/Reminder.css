@@ -2,6 +2,7 @@
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 50px;
     background-color: #17252A;
     border-color: #17252A;
     color: #FFFFFF;
@@ -11,3 +12,8 @@
     display: block !important;
 }
 
+
+h1{
+
+    padding-bottom: 80px !important;
+}

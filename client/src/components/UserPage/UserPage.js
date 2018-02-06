@@ -12,12 +12,12 @@ const UserPage = () =>
 
 <div className="main">
 <div className="brand">
-<h1 className="mb-1">Madpass</h1>
+<h1 className="mb-3">Welcome, Beverly</h1>
 </div>
 <h3 className="mb-5">
-  <em>User Page</em>
+  <em></em>
 </h3>
-<Reminder urls={["test","test2"]}/>
+<Reminder urls={["Reminder 1","Reminder 2", "Reminder 3", "Reminder 4", "Reminder 5"]}/>
 </div>
 </div>
 ;
