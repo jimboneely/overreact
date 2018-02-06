@@ -1,4 +1,19 @@
-html, body {
+body {
+    background-color: #3AAFA9;
+}
+
+.proceed-btn{
+  margin: 50px;
+  padding: 20px;
+  background-color: #17252A;
+  border-color: #17252A;
+  font-family: 'Nunito', sans-serif;
+  color: #FEFFFF;
+  border-radius:8rem;
+  font-weight: 600;
+}
+
+/* html, body {
     height:100vh;
 }
 .navbar-default{
@@ -70,4 +85,4 @@ h3{
 }
 .navbar-brand{
   color: white !important;
-}
+} */

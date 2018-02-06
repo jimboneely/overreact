@@ -64,7 +64,7 @@ class QuestionGen extends Component {
         <button
           onClick={this.handleFormSubmit}
           type="submit"
-          className="btn btn-lg">
+          className="btn btn-lg submit-btn">
           Submit
         </button>
       </div>
@@ -116,8 +116,8 @@ class QuestionGen extends Component {
         <div>
         <SimpleSlider sentence={this.state.sentence} />
         <h2>{this.state.sentence}</h2>
-        <button className="btn-main" onClick={this.clearSentenceState}>Retry</button>
-        <button className="btn-main">Save Passphrase</button>
+        <button className="proceed-btn" onClick={this.clearSentenceState}>Retry</button>
+        <button className="proceed-btn">Save Passphrase</button>
         </div>
         :
         this.displayQuestionGenerator()}

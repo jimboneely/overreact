@@ -48,7 +48,7 @@ var pg = {
 			'beforeConsonant': 'the|a'.split('|')
 		},
 		'preposition': 'to|through|under|over|between|on|in|above|below'.split('|'),
-		'adjective': 'beautiful|tall|flowing|hot|cold|fragrant|misty|bare|coarse|blind|dim|dreary|elaborate|enchanting|gleaming|glistening|green|organic|tender|cloudless'.split('|'),
+		'adjective': 'beautiful|tall|flowing|hot|cold|smelly|misty|bare|hairy|blind|dim|dreary|elaborate|enchanting|gleaming|gsweaty|green|red|blue|orange|purple|organic|tender|cloudless'.split('|'),
 		'adverb': 'quickly|slowly|boldly|always|angrily|cheerfully|elegantly|frantically|innocently|nervously|powerfully|rarely|silently|wildly|warmly|sadly'.split('|'),
 		'noun': 'hair|finger|sun|field|arm|sphere|rock|sand|grass|tree|flower|orb|sea|water|ocean|tide|sky|cloud|moon|star|cosmos|ant|otter|elephant'.split('|'),
 		'pronoun': 'he|she|it|someone'.split('|'),

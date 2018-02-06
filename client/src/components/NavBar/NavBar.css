@@ -1,9 +1,34 @@
 .loginButton{
     background:none!important;
     color:inherit;
-    border:none; 
+    border:none;
     padding:0!important;
     font: inherit;
     margin-top: 15px;
     margin-right:5px;
+}
+
+.navbar-default{
+    margin: 0px;
+    color:rgba(255, 255, 255, 0.479);
+    background-color: #17252A;
+    border-color: #17252A;
+    border-radius: 0rem;
+}
+
+.nav-div p{
+    vertical-align: middle;
+    margin: 0 auto;
+    background-color: #3AAFA9;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    background-color: #17252A !important;
+    color: white !important;
+}
+.navbar-brand{
+  color: white !important;
 }

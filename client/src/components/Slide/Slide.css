@@ -1,3 +1,7 @@
+html, body {
+    height:100vh;
+    background-color: #3AAFA9;
+}
 .container {
   margin: 0 auto;
   padding: 40px;
@@ -5,9 +9,13 @@
   color: #333;
   background: #3AAFA9;
   margin-top: -25px;
+
 }
 .slick-slider{
+    margin-top: 70px;
+    padding-top: 10px;
     margin-left: 35px;
     padding-left: 30px;
+
 
 }
