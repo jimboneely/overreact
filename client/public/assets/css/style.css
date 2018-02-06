@@ -5,11 +5,12 @@ body {
 .proceed-btn{
   margin: 50px;
   padding: 20px;
+  width: 160px !important;
   background-color: #17252A;
   border-color: #17252A;
   font-family: 'Nunito', sans-serif;
   color: #FEFFFF;
-  border-radius:8rem;
+  border-radius:0;
   font-weight: 600;
 }
 

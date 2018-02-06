@@ -1,0 +1,13 @@
+.btn-main-2 {
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #17252A;
+    border-color: #17252A;
+    color: #FFFFFF;
+    border-radius: 0 !important;
+    text-align: left  !important;
+    width: 400px;
+    display: block !important;
+}
+

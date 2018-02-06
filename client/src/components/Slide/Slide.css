@@ -14,8 +14,14 @@ html, body {
 .slick-slider{
     margin-top: 70px;
     padding-top: 10px;
-    margin-left: 35px;
+    margin-left: 5px;
     padding-left: 30px;
 
-
+}
+.slick-dots {
+    bottom: -25px;
+    width: 100%;
+    padding-right: 60px !important;
+    list-style: none;
+    text-align: center;
 }
