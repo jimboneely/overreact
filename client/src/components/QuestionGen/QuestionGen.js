@@ -76,7 +76,7 @@ class QuestionGen extends Component {
   </h2>
   }
   {this.state.sentence.length > 0 &&
-    <Link to="/simpleslider"><button className="btn-main">Use Passphrase</button></Link>
+    <Link to="/simpleslider"><button className="proceed-btn">Use Passphrase</button></Link>
   }
   </div>
     )
