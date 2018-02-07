@@ -6,8 +6,8 @@ import firebase, { auth, provider } from '../../firebase.js';
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 
 class NavBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.login = this.login.bind(this); 
     this.logout = this.logout.bind(this); 
   };
@@ -15,6 +15,7 @@ class NavBar extends Component {
     auth.onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user });
+        this.props.handleAuth(user);
       } 
     })};
   state={
@@ -23,12 +24,11 @@ class NavBar extends Component {
   login() {
     auth.signInWithPopup(provider) 
       .then((result) => {
-        
         const user = result.user;
+        this.props.handleAuth(user);
         this.setState({
           user
         });
-        console.log(this.state.user.photoURL);
       });
   };
   logout() {
