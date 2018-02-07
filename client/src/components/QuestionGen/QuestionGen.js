@@ -134,11 +134,11 @@ class QuestionGen extends Component {
       const uid = user.uid;
       const image = this.state.selectedImage;
       firebase.database().ref('id/' + uid).push({
-        passphrase : image
+        image
       });
       window.location = "/userpage"
       
-    }else{<alert>You are not logged in!</alert>}
+    }else{alert("You are not logged in!")}
   }
 
   render() {
