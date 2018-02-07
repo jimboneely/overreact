@@ -5,7 +5,8 @@ import Reminder from '../Reminder/';
 import firebase, { auth, provider } from '../../firebase.js';
 
 
-const UserPage = () => {
+const UserPage = (props) => {
+  console.log("UserPage", props)
   const currentUser = Object.assign({},auth.currentUser)
   const username = currentUser.displayName;
   return(
