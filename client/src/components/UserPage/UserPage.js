@@ -19,7 +19,7 @@ const UserPage = (props) => {
     <h3 className="mb-5">
       <em></em>
     </h3>
-    <Reminder urls={["Reminder 1","Reminder 2", "Reminder 3", "Reminder 4", "Reminder 5"]}/>
+    <Reminder urls={props.passphrase}/>
     </div>
     </div>
   )}
