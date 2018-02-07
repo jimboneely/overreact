@@ -33,7 +33,7 @@ class App extends Component {
           <Route exact path="/" component={MainPage} />
           <Route exact path="/questiongen" component={QuestionGen} />
           <Route exact path="/simpleslider" component={SimpleSlider} />
-           <Route exact path="/userpage" render={UserPage} user={this.state.user} />
+          <Route exact path="/userpage" component={UserPage} />
 
       </div>
       </Router>

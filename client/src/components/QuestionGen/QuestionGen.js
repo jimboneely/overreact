@@ -129,14 +129,14 @@ class QuestionGen extends Component {
 
   addPassPhraseToFireBase = event => {
     if(this.state.user){
-      const user = this.state.user;
-      console.log(user.uid);
-      const uid = user.uid;
-      const image = this.state.selectedImage;
-      firebase.database().ref('id/' + uid).push({
-        image
-      });
-      window.location = "/userpage"
+      // Create the object
+      const userData = {}
+      userData["uid"] = this.state.user.uid;
+      userData["images"] = this.state.selectedImage;
+      console.log(userData);
+
+      firebase.database().ref('users/'+userData.uid).push(userData.images)
+      .then(data => {console.log("FB-CB",data); window.location = "/userpage"})
       
     }else{alert("You are not logged in!")}
   }
