@@ -31,6 +31,10 @@ giphyGetData(){
     console.log("state", this.state.pictures);
   })
 }
+saveImage(e){
+  console.log(e);
+  this.props.handler(e);
+}
 
   render() {
 
@@ -42,9 +46,9 @@ giphyGetData(){
       slidesToScroll: 3
     };
     return (
-      <div className='container'>
+      <div className='container' >
         <Slider {...settings}>
-          {this.state.images.map(image => <div><img src={image} height="200" width="300" /></div>)}
+          {this.state.images.map(image => <div><img src={image} height="200" width="300" onClick={() => this.props.handler(image)} /></div>)}
         </Slider>
       </div>
     );

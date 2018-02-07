@@ -6,7 +6,14 @@ import "./QuestionGen.css";
 import SimpleSlider from '../Slide/';
 
 class QuestionGen extends Component {
-
+  constructor(props) {
+    super(props)
+    this.handler = this.handler.bind(this)
+  }
+  handler(e) {
+    console.log("QuestionG-handler",e);
+    this.setState({selectedImage:e});
+  }
   state = {
     noun: "",
     verb: "",
@@ -86,7 +93,8 @@ class QuestionGen extends Component {
       noun: "",
       verb: "",
       number: "",
-      sentence:""
+      sentence:"",
+      selectedImage:""
     });
   };
   handleFormSubmit = event => {
@@ -114,8 +122,11 @@ class QuestionGen extends Component {
 
       {this.state.sentence ?
         <div>
-        <SimpleSlider sentence={this.state.sentence} />
+        <SimpleSlider sentence={this.state.sentence} handler={this.handler} />
         <h2>{this.state.sentence}</h2>
+        {this.state.selectedImage?<h2>Image Selected is <img src={this.state.selectedImage} height="80" width="120" /> </h2>
+          :
+          <h2>Click on an image for reminder</h2>}
         <button className="proceed-btn" onClick={this.clearSentenceState}>Retry</button>
         <button className="proceed-btn">Save Passphrase</button>
         </div>
