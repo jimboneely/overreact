@@ -15,10 +15,10 @@ const Reminder = ((props) =>{
 	let content = Object.values(props.urls).map((url) => <button onClick={()=>changeImage(url)} className="btn-main-2"> {url} </button> );
 	return (
 		<div>
-			<div className="md-4 ">
+			<div className="col-md-6 ">
 				{content}
 			</div>
-			<div className="md-4 reminderdivs">
+			<div className="col-md-4 reminderdivs">
 				<DisplayImage image={image} />
 			</div>
 		</div>
