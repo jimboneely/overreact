@@ -17,11 +17,10 @@ class App extends Component {
     super(props);
     this.handleAuth = this.handleAuth.bind(this);
     this.state={
-      user: "nobody"
+      user: ""
     }
   }
   handleAuth(e){
-    console.log(e);
     this.setState({
       user:e
     })
@@ -31,7 +30,6 @@ class App extends Component {
       <Router>
       <div className="App">
           <NavBar handleAuth={this.handleAuth}/>
-          {NavBar}
           <Route exact path="/" component={MainPage} />
           <Route exact path="/questiongen" component={QuestionGen} />
           <Route exact path="/simpleslider" component={SimpleSlider} />
